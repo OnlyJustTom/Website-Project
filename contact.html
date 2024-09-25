@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--The Title of the webpage-->
+        <title>Contact Us</title>
+        <!--Links the HTML to the JavaScript, CSS files stored locally as well as geting fonts and JQuery from online servers-->
+        <link rel="icon" type="image/x-icon" href="Resources/">
+        <script type="text/javascript" src="code.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <!--The Navigation bar-->
+        <div class="top-bar">
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Schedule</a> 
+            <a href="speakers.html">Speakers</a>
+            <a href="contact.html">Contact</a>
+            <a class="split" href="register.html">Register</a>
+        </div>
+            <!--This contains the contact information-->
+            <div class="contactContainer">
+                <div class="contact contactGridItem">
+                    <h1>Ways of contacting us...</h1>
+                </div>
+                <div class="contact contactGridItem">
+                    <h1>Contact us via our email</h1>
+                    <p id="copyText">te92@student.le.ac.uk</p>
+                    <!--This button runs the function emailCopy() which is found in the code.js file and copies the email above to the clipboard-->
+                    <button onclick="emailCopy()">Click me to get the email</button>
+                </div>
+                <div class="contact contactGridItem">
+                    <h1>Contact us via our phone number</h1>
+                    <p>0844 477 2000</p>
+                </div>
+                <div class="contact contactGridItem">
+                    <h1>You can contact us on social media</h1>
+                    <p>Instagram: @TechCon2023</p>
+                    <p>Facebook: @TechCon2023</p>
+                    <p>Twitter: @TCon2023</p>
+                </div>
+                <div class="contact contactGridItem">
+                    <h1>You can find us here:</h1>
+                    <ul>
+                        <li>O2 Academy</li>
+                        <li>12 University Road</li>
+                        <li>Leicester</li>
+                        <li>LE1 7RH</li>
+                        <li>Monday - Friday</li>
+                        <li>27/11/23 - 1/12/23</li>
+                    </ul>
+                </div>
+                <div class="contact contactGridItem">
+                    <h1>Send us a message</h1>
+                    <!--This form would allow a person to send the organisers a message-->
+                    <form>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message</label>
+                        <input type="text" id="text" name="text" required>
+
+                        <button type="submit">Submit</button>
+                </div>
+            </div>
+    </body>
+</html>

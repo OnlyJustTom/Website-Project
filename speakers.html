@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Title of the webpage-->
+        <title>Speakers</title>
+        <!--Links the HTML to the JavaScript, CSS files stored locally as well as geting fonts and JQuery from online servers-->
+        <link rel="icon" type="image/x-icon" href="Resources/speaker.png">
+        <script type="text/javascript" src="code.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.speakerGridItem').click(function() {
+                    // Hide all speakers
+                    $('.speakerGridItem').addClass('hidden');
+                    // Show the clicked speaker
+                    $(this).removeClass('hidden');
+                    //Makes the clicked speaker bigger
+                    $(this).addClass("detail");
+                    //Shows the about section of the speaker
+                    $("h4").removeClass('hidden');
+                });
+
+                // Clicking on the document body (outside the speaker) will show all speakers
+                $(document).click(function(event) {
+                    // Check if the clicked element is not a speaker
+                    if (!$(event.target).hasClass('speakerGridItem')) {
+                        // Show all speakers and returns large speaker to its orignal size as well as removing the about section
+                        $('.speakerGridItem').removeClass('hidden');
+                        $(".speakerGridItem").removeClass("detail");
+                        $("h4").addClass("hidden");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <!--The Navigation bar-->
+        <div class="top-bar">
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Schedule</a> 
+            <a href="speakers.html">Speakers</a>
+            <a href="contact.html">Contact</a>
+            <a class="split" href="register.html">Register</a>
+        </div>
+        <div class="speakerTitle">
+            <h1>Speakers appearing at TechCon 2023</h1>
+        </div>
+        <!--The different Speakers, there subject, images and about section-->
+        <div class="speakerGrid">
+            <div class="speakerGridItem" id="speakerButton">
+                <h1 id="text">Karim Wang</h1>
+
+                <div id="speakerText">
+                    <h3>Subject: A self-driving future</h3>
+                <h4 class="hidden" id="speakerText">About: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+                    <div>
+                        <img id="speakerImg" src="Resources/SpeakerImages/Karim.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="speakerGridItem" id="speakerButton">
+                <h1 id="text">Timothy James</h1>
+                <div id="speakerText">
+                    <h3>Subject: "How exactally do you make a computer?"</h3>
+                <h4 class="hidden" id="speakerText">About: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</h4>
+                    <div>
+                        <img id="speakerImg" src="Resources/SpeakerImages/Tim.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="speakerGridItem">
+                <h1 id="text">Lukas Müller</h1>
+                <div id="speakerText">
+                    <h3>Subject: How computers are being used in the return to the moon</h3>
+                <h4 class="hidden" id="speakerText">About: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+                    <div>
+                        <img id="speakerImg" src="Resources/SpeakerImages/Lucas.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="speakerGridItem">
+                <h1 id="text">David Sanches</h1>
+                <div id="speakerText">
+                    <h3>Subject: How new design processes will result in smaller processor sizes</h3>
+                    <h4 class="hidden" id="speakerText">About: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</h4>
+                    <div>
+                        <img id="speakerImg" src="Resources/SpeakerImages/Roy.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="speakerGridItem">
+                <h1 id="text">Mia Smith</h1>
+                <div id="speakerText">
+                    <h3>Subject: How technology has impacted our <br> experiences at home</h3>
+                <h4 class="hidden" id="speakerText">About: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+                    <div>
+                        <img id="speakerImg" src="Resources/SpeakerImages/Mia.webp">
+                    </div>
+                </div>
+            </div>
+            <div class="speakerGridItem">
+                <h1 id="text">Elon Musk</h1>
+                <div id="speakerText">
+                    <h3>Subject: Advanced Artifical Inteligence <br> and its place in our future</h4>
+                <h4 class="hidden" id="speakerText">About: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+                    <div>
+                        <img id="speakerImg" src="Resources/SpeakerImages/Elon.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

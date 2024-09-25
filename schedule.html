@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Title of the webpage-->
+        <title>Schedule</title>
+        <!--Links the HTML to the JavaScript, CSS files stored locally as well as geting fonts and JQuery from online servers-->
+        <script type="text/javascript" src="code.js"></script>
+        <link rel="icon" type="image/x-icon" href="Resources/schedule.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <!--The Navigation bar-->
+        <div class="top-bar">
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Schedule</a> 
+            <a href="speakers.html">Speakers</a>
+            <a href="contact.html">Contact</a>
+            <a class="split" href="register.html">Register</a>
+        </div>
+        <!--The day filter when this is changed it runs the function filterTable() which is located in the code.js file-->
+        <div class="daySelector">
+            <h4>Select the day</h4>
+            <select id="day" onchange="filterTable()">
+                <option value="All" selected>All</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+              </select>              
+        </div>
+        <br>
+        <div class="schedule">
+            <!--The timetable, each block represents a date apart from the first block which is all the times-->
+            <table id="timetable">
+                <thead>
+                    <tr class="time">
+                        <th class="day">DAY</th>
+                        <th>10AM-11AM</th>
+                        <th>11AM-12PM</th>
+                        <th>12PM-1PM</th>
+                        <th>1PM-2PM</th>
+                        <th>2PM-3PM</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="event time">
+                        <th class="day">Monday</th>
+                        <td>Welcome Presentation</td>
+                        <td>Welcome Presentation</td>
+                        <td>Meet the Speakers</td>
+                        <td>Lunch</td>
+                        <td> - </td>
+                        
+                    </tr>
+                    <tr class="event time">
+                        <th class="day">Tuesday</th>
+                        <td>Karim Wang</td>
+                        <td>Timothy James</td>
+                        <td>Timothy James</td>
+                        <td>Lunch</td>
+                        <td>Karim Wang</td>
+                        
+                    </tr>
+                    <tr class="event time">
+                        <th class="day">Wednesday</th>
+                        <td>Lukas Müller</td>
+                        <td>Lukas Müller</td>
+                        <td>Meet the speakers</td>
+                        <td>Lunch</td>
+                        <td>Meet the speakers</td>
+                        
+                    </tr>
+                    <tr class="event time">
+                        <th class="day">Thursday</th>
+                        <td>David Sanches</td>
+                        <td>David Sanches</td>
+                        <td>Mia Smith</td>
+                        <td>Lunch</td>
+                        <td>Mia Smith</td>
+                       
+                    </tr>
+                    <tr class="event time">
+                        <th class="day">Friday</th>
+                        <td>Mia Smith</td>
+                        <td>Elon Musk</td>
+                        <td>Elon Musk</td>
+                        <td>Lunch</td>
+                        <td>Closing Presentation</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </body>
+</html>

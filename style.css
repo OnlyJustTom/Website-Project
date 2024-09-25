@@ -1,0 +1,353 @@
+*{
+    font-family: "Roboto",sans-serif; /*Sets the font for the entire webpage unless specified*/
+}
+
+.top-bar{
+    position: fixed;
+    background-color: white;
+    width: 99%;         /*The styling for the navigation bar*/
+    z-index: 10;
+    box-shadow:5px 10px rgba(99, 99, 99, 0.30);
+}
+
+
+
+.top-bar a{
+    float: left;
+    background-color: white;
+    padding: 10px 1%;
+    text-align: center; /*The styling for the links on the navigation bar*/
+    text-decoration: none;
+    font-size: 52px;
+    color: black;
+}
+
+
+a.split{
+    float:right; /*Floats the register bar to the right of the navigation bar*/
+}
+
+.top-bar a:hover{
+    color: gray;
+    transform: scale(110%);     /*Creates a hovering effect when the mouse is hovered over a link in the navbar*/
+    box-shadow:5px 10px rgba(99, 99, 99, 0.30);
+}
+
+
+body{
+    background-color: #c4c4c4;  /*Sets the colour and removes any x-overflow in the body of all webpages*/
+    overflow-x: hidden;
+ }
+.welcome{
+    position: relative;
+    left: 50%;
+    width: 100%;
+    height: 25%;
+    text-align: center;
+    transform: translate(-50%,125%);    /*Code for the welcome text*/
+    font-size: 52px;
+}
+.welcome h4{
+    text-align: center;
+    transform: translate(0,-100%);   
+}
+
+
+.break{
+    top: 575px;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    box-shadow:5px 10px #888888;
+}
+.break h1{
+    position: relative;
+    text-align: center;
+    top: 35%;
+    font-size: 52px;
+}
+
+/*Code for the various blocks on the welcome page (index.html)*/
+
+.scheduleIndex{
+    position: relative;
+    top: 700px;
+    width: 50%;
+    background-color: white;
+    height: 400px;
+    box-shadow:5px 10px #888888;
+}
+
+.scheduleIndex #left{
+    float: left;
+    margin-left: 35%;
+}
+.scheduleIndex #right{
+    position: relative;
+    transform: translate(-100px,-400px);
+    float: right;
+    margin-right: 15%;
+}
+.scheduleIndex #scheduleImage{
+    position: relative;
+    top: 100px;
+    transform: translate(85%,-70%) scale(25%);
+}    
+.scheduleIndex #text{
+    position: relative;
+    font-size: 42px;
+    transform: translate(5%,-300%);
+    z-index: 1;
+    left: 10px;
+}
+
+.speakerIndex{
+    position: relative;
+    top: 675px;
+    width:50%;
+    left:50%;
+    background-color: white;
+    height: 400px;
+    box-shadow:5px 10px #888888;
+}
+
+.speakerIndex #text{
+    position: relative;
+    font-size: 42px;
+    left: 45%;
+}
+
+.speakerIndex #text p{
+    transform: translate(-35%,-400%);
+}
+
+.speakerIndex #image{
+    transform: translate(-30%,-50%) scale(25%);
+}
+
+.registerIndex{
+    position: relative;
+    top: 675px;
+    width: 50%;
+    background-color: white;
+    height: 400px;
+    box-shadow:5px 10px #888888;
+}
+.registerIndex #text{
+    position: relative;
+    font-size: 42px;
+    left: 45%;
+}
+
+.registerIndex #text p{
+    transform: translate(-35%,90%);
+}
+.registerIndex #image{
+    transform: translate(10%,-55%) scale(15%);
+}
+.bottomIndex{
+    position: relative;
+    top: 700px;
+    width: 50%;
+    left: 50%;
+    background-color: white;
+    height: 400px;
+    box-shadow:5px 10px #888888;
+}
+.bottomIndex #text{
+    position: relative;
+    font-size: 42px;
+    left: 45%;
+}
+.bottomIndex #text p{
+    transform: translate(-35%,90%);
+}
+
+.addressIndex{
+    position: relative;
+    top: 700px;
+    width: 50%;
+    background-color: white;
+    height: 400px;
+    box-shadow:5px 10px #888888;
+}
+
+/*Styling for all the contact boxes on the contact page*/
+
+.contact{
+    box-shadow:5px 10px rgba(99, 99, 99, 0.30);
+}
+
+.contactTitlePage{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1%;
+}
+
+
+.contactContainer{
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,auto);
+    gap: 50px;
+    grid-row: 2;
+}
+
+.contactGridItem{
+    padding:10px;
+    background-color: white;
+}
+
+/*The styling for the speaker page */
+
+.speakerTitle{
+    position: relative;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 90px;
+    box-shadow:5px 10px rgba(99, 99, 99, 0.30);
+    
+}
+
+.speakerGrid{
+    position: relative;
+    padding-top: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid; /*Sets up the grid for the speakers*/
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(auto);
+    gap: 50px;
+}
+
+.speakerGridItem{
+    position: relative;
+    background-color: white;
+    height: 400px;      /*Styling for the divs that hold the speakers*/
+    text-align: center;
+    box-shadow:5px 10px #888888;
+    overflow: hidden;
+}
+
+.speakerGridItem:hover{
+    transform:scale(105%)
+}
+
+
+#speakerImg {
+    position: relative;
+    padding: 5px;
+    width:35%;
+    margin: 0px;
+    height:auto;
+    object-fit: contain;
+}
+
+#speakerText{
+    overflow: hidden;
+}
+
+/*These are used when the speaker is pressed*/
+
+.hidden{
+    display: none;
+}
+
+.detail{
+    position: relative;  
+    width: 300%;
+    height: 100%;
+}
+
+/*Styling for the div that holds the schedule*/
+
+.schedule {
+    justify-content: center;
+    top: 100px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    
+
+}
+
+/*Styling for the day and time sections of the schedule table*/
+
+.day{
+    border: 1px solid #ddd;
+    padding: 50px;
+    text-align: center;
+    background-color: white;
+}
+
+.time{
+    padding: px;
+    background-color: white;
+    
+
+}
+.event {
+    border: 10px solid white;
+    padding: 10px;
+    text-align: center;
+    background-color: #c4c4c4;
+}
+
+#timetable th,
+#timetable td {
+        text-align: left;
+        padding: 50px;
+        border: 2px solid #ddd; /* Add borders to timetable elements */
+        width: 10%; /* Set the width of all the elements to 10% of the screen size */
+        text-align: center;
+    }
+
+.daySelector{
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+/*Styling for the register page*/
+
+.registerTitle{
+    position: relative;
+    top:110px;
+    text-align: center;
+    width: 25%;
+    left:37.5%;
+    background-color: white;
+    box-shadow:5px 10px rgba(99, 99, 99, 0.30);
+}
+
+.registerForm{
+    background-color: white;
+    width: 45%;
+    padding: 10px;
+    padding-left: 50px;
+    transform: translate(55%,30%);
+    box-shadow:5px 10px rgba(99, 99, 99, 0.30);
+}
+
+.registerForm label{
+    padding: 10px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.registerForm input {
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
